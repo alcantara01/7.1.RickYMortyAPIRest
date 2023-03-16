@@ -8,9 +8,9 @@ function BarraNav({ brand }) {
   return (
     <div className="container_navbar">
       <nav className="navbar navbar-dark bg-dark">
-        <div className="container-fluid">
+        <div className="container-fluid justify-content-center">
           <a className="navbar-brand" href="">{brand}</a>
-          <h1 className="titulo">Rick Y Morty</h1>
+          <h1 className="titulo">API Rest de Rick Y Morty</h1>
         </div>
       </nav>
     </div>

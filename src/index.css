@@ -1,6 +1,44 @@
 /*BarraNav.jsx*/
 .titulo {
   color: #02B1C8;
-  text-align: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 /*Personajes.jsx*/
+.container {
+  background-color: #02B1C8;
+}
+.card-body {
+  height: 200px;
+}
+
+.card-title {
+  color: black;
+  font-weight: bold;
+  font-size: 23px;
+}
+
+/*Footer.jsx*/
+footer{
+  background-color: black;
+}
+
+.footer_izq {
+  text-align: left;
+  color: #ffffff;
+}
+
+.footer-copyright {
+  padding-top: 38px;
+  color: #ffffff;
+  text-align: left;
+}
+
+.footer-copyright a {
+  color: #02B1C8;
+  text-decoration: none;
+}
+
+.logo_footer{
+  max-width: 250px;
+}
+

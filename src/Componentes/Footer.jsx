@@ -6,17 +6,20 @@ import '../index.css';
 
 function Footer() {
   return (
-    <footer>
-      <div className="footer-bottom">
-        <div className="container-footer-inf container-fluid">
-          <div className="row">
-            <div className="col-md-6 footer-copyright">
-              © Pagina creada por Cristina Alcántara
+    <footer className="container-fluid">
+      <div className="row">
+        <div className="col-md-6 col-sm-12 footer_izq">
+          <div className="footer-copyright">
+            <p>
+              © Pagina creada por Cristina Alcántara del
               {' '}
               <a href="http://www.ies-azarquiel.es/">IES AZARQUIEL</a>
-              <img className="logo-footer" src={ImgLogo} alt="logo" id="logo-footer" />
-            </div>
+              .
+            </p>
           </div>
+        </div>
+        <div className="col-md-6 col-sm-12 footer_der">
+          <img className="logo_footer" align="right" src={ImgLogo} alt="logo" />
         </div>
       </div>
     </footer>
