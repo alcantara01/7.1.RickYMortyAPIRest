@@ -1,29 +1,35 @@
-import { useState } from 'react'
-import './App.css'
+import React, { useEffect, useState } from 'react';
+import './index.css';
+import BarraNav from './Componentes/BarraNav';
+import Personajes from './Componentes/Personajes';
+import Footer from './Componentes/Footer';
+
+const urlRM = 'https://rickandmortyapi.com/api/character';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [personajes, setPersonajes] = useState([]);
 
+  const fetchCharacters = (url) => {
+    fetch(url)
+      .then((response) => response.json())
+      .then((data) => {
+        setPersonajes(data.results);
+      })
+      .catch((error) => console.log(error));
+  };
+
+  useEffect(() => {
+    fetchCharacters(urlRM);
+  }, []);
   return (
-    <div className="App">
-      <div>
-        <a href="https://reactjs.org" target="_blank">
-        </a>
+    <>
+      <BarraNav />
+      <div className="container-fluid">
+        <Personajes characters={personajes} />
       </div>
-      <h1>API Rest de Rick y Morty</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
+      <Footer />
+    </>
+  );
 }
 
-export default App
+export default App;
